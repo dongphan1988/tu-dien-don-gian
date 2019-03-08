@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type="text" id="myInput"/>
+<button type="button" onclick="check()">TRANSLATE</button> <br>
+<input type="text" disabled id="val" value="" placeholder="Nhap tu can chuyen">
+
+<script>
+    let english =["dog", "pig", "chicken", "cat"];
+    let tiengviet = ["cho", "lon", "ga", "meo"];
+    function check() {
+        a = document.getElementById( "myInput" ).value;  // de trong lenh function
+        for (let i = 0; i < english.length; i++) {
+            if ( a === english[i] ) {
+                document.getElementById("val").value = tiengviet[i];
+                break;
+            }else{
+                document.getElementById("val").value = "moi nhap lai";
+            }
+        }
+    }
+
+</script>
+</body>
+</html>
